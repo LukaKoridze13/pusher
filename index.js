@@ -1,6 +1,6 @@
-const express = require("express");
-const Pusher = require("pusher");
-const cors = require("cors");
+import express from "express";
+import Pusher from "pusher";
+import cors from "cors";
 const app = express();
 app.use(cors());
 const pusher = new Pusher({
@@ -11,11 +11,15 @@ const pusher = new Pusher({
   useTLS: true,
 });
 
-app.post("/broadcast-event", (req, res) => {
+app.get("/", (req, res) => {
+  res.status(200).json("Server on");
+});
+
+app.post("/create", (req, res) => {
   const eventData = {
     message: "Hello from the server!",
   };
-  pusher.trigger("create-ticket-channel", "create-event", eventData);
+  pusher.trigger("create-ticket-channel", "create-ticket", eventData);
   res.status(200).json({ success: true, message: "Event broadcasted." });
 });
 
