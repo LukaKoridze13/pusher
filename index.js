@@ -22,7 +22,8 @@ app.post("/create", (req, res) => {
   pusher.trigger("create-ticket-channel", "create-ticket", eventData);
   res.status(200).json({ success: true, message: "Event broadcasted." });
 });
+const port = process.env.PORT || 3000;
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is running on port 3000");
 });
