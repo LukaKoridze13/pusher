@@ -3,5 +3,25 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "pusher": "^5.1.3"
-  }
+  },
+  "name": "pusher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukaKoridze13/pusher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukaKoridze13/pusher/issues"
+  },
+  "homepage": "https://github.com/LukaKoridze13/pusher#readme",
+  "description": ""
 }
